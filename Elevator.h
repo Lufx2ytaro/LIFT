@@ -5,6 +5,7 @@ using namespace std;
 
 class Elevator
 {
+	static int sum_count_floor;
 	bool on_off{};
 	int top;
 	int bottom;
@@ -14,6 +15,10 @@ class Elevator
 
 public:
 	Elevator(int pBottom, int pTop) : on_off{ false }, top{ pTop }, bottom{ pBottom }, curent{ 0 } {};
+
+	Elevator() : Elevator(0, 0) {};
+
+
 
 	bool getStatus()
 	{
